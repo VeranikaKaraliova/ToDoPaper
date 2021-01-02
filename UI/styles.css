@@ -1,0 +1,266 @@
+:root {
+  --main-pink: #700961;
+  --main-green: #0C7B93;
+  --main-color-fon: #FCF7FD;
+}
+
+html {
+  font-size: 14px;
+}
+
+.body {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--main-color-fon);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  display: flex;
+
+  background: rgba(112, 9, 97, 0.05);
+}
+
+.logo-name{
+  font-family: Open Sans;
+  font-weight: bold;
+  margin: 0 1rem;
+  height: 3rem;
+  font-size: 2rem;
+  flex: 5;
+
+  color: #737072;
+  opacity: 100%;
+}
+
+.hello-user{
+  margin: 0 1rem;
+  font-family: Open Sans;
+  display: flex;
+  
+  font-size: 1.2rem;
+  align-items: center;
+  text-align: center;
+  color: #0C7B93;
+}
+
+.btn-exit{
+  margin: 0 1rem;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-exit > p {
+  margin: 0;
+
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 1.2rem;
+  align-items: center;
+  text-align: center;
+  color: var(--main-pink);
+}
+
+.main{
+  position: relative;
+  top: 5rem;
+  height: calc(100% - 7.5rem);
+  padding: 0 2rem;
+  display: block;
+}
+
+.task{
+  display: flex;
+  height: calc(100% - 5rem);
+}
+
+.filter, .new-task, .done-task{
+  flex: 1.5;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.new-task >p, .done-task > p{
+  font-size: 1.2rem;
+  color: #700961;
+}
+
+.search{
+  max-width: 21rem;
+  min-width: 12rem;
+  height: 3rem;
+  margin: 4rem 0;
+  display: flex;
+
+  background: #FFFFFF;
+  border: 1px solid var(--main-pink);
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.container-task{
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+.text-task{
+  max-width: 21rem;
+  min-width: 15rem;
+  height: 3rem;
+  flex: 3;
+  display: flex;
+  align-items: center;
+
+  background: #FFFFFF;
+  border: 1px solid #700961;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.text-task > p {
+  flex: 5;
+}
+
+.fa-edit, .fa-trash-alt{
+  flex: 1;
+  opacity: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.round {
+  position: relative;
+  margin: 0 1rem;
+  width: 2rem;
+  height: 2rem;
+  flex: 1;
+}
+
+.round label {
+  position: absolute; 
+  left: 0;
+  top: 0;
+  height: 2rem;
+  width: 2rem;
+
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid var(--main-green);
+  border-radius: 50%;
+}
+
+.round label:after {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 1rem;
+  height: 0.5rem;
+
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: var(--main-green);
+  border-color: var(--main-green);
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+.add-task-container{
+  position: absolute;
+  height: max-content;
+  bottom: 2rem;
+  padding-left: 30%;
+  width: 40%;
+}
+
+.fa-check{
+  margin: 0 1rem;
+  color: var(--main-green);
+  cursor: pointer;
+}
+
+.add-task{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+
+  background: #FFFFFF;
+  border: 1px solid #700961;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.time{
+  flex: 1;
+  min-width: 5rem;
+  line-height: 0.5rem;
+  height: 3rem;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+.write-task{
+  height: 90%;
+  margin: 0 1rem;
+  width: 90%;
+  border: none;
+  flex: 1;
+}
+
+.btn-add-task{
+  width: 5rem;
+  border: none;
+  background: var(--main-pink);
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.btn-add-task > p {
+  font-family: Open Sans;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+
+  cursor: pointer;
+  color: #FAE9FD;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+
+  font-size: 0.8rem;
+  text-align: center;
+  background: rgba(112, 9, 97, 0.03);
+}
+
+.list-footer {
+  width: auto;
+  list-style: none;
+  display: inline-flex;
+}
+
+.list-footer > li {
+  width: auto;
+  padding-left: 1rem;
+}
