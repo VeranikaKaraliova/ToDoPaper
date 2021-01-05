@@ -10,121 +10,106 @@
   <title>Document</title>
 </head>
 <body class="body">
-  <header class="header">
+  <header class="header" id="header">
       <p class="logo-name">ToDo Paper</p>
-      <p class="hello-user">Привет, Nika</p>
-      <p>|</p>
-      <button class="btn-exit"><p>Выход</p></button>
+      <div class="active-user" id="active-user">
+        <p class="hello-user" id="hello-user">Привет, Nika</p>
+        <p>|</p>
+        <button class="btn-exit"><p>Выход</p></button>
+      </div>
+      <div id="login-registr" class="login-registr">
+        <a href='#' class="login-button">Войти|</a>
+        <a href='#' class="regisrt-button">Зарегистрироваться</a>
+    </div>
   </header>
   <main class="main">
     <div class="task">
       <div class="filter">  
         <div class="search">
-          <input type="text" class="write-task" id="write-task" placeholder="Найти..." />
+          <input type="text" class="write-task" id="search-task" placeholder="Найти..." />
           <button class="btn-add-task"><p>Найти</p></button>
         </div>
       </div>
-      <div class="new-task">
+      <div class="new-task" id="new-task">
         <p>Мои задачи</p>
-        <div class="container-task">
-          <div class="text-task">
-              <div class="round">
-                <input type="checkbox" id="22"/>
-                <label for="22"></label>
-              </div>
-              <p>Вынести мусор</p>
-              <i class="fas fa-edit"></i>
-              <i class="fas fa-trash-alt"></i>
-          </div>
-          <div class="time">
-            <p>11 july 2021</p>
-            <p>11 : 30</p>
-          </div>
-        </div>
-        <div class="container-task">
-          <div class="text-task">
-            <div class="round">
-              <input type="checkbox" id="111" />
-              <label for="111"></label>
-            </div>
-            <p>Вынести мусор</p>
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
-        </div>
-          <div class="time">
-            <p>11 july 2021</p>
-            <p>11 : 30</p>
-          </div>
-        </div>
-        <div class="container-task">
-          <div class="text-task">
-            <div class="round">
-              <input type="checkbox" id="33" />
-              <label for="33"></label>
-            </div>
-            <p>Вынести мусор</p>
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
-          </div>
-          <div class="time">
-            <p>11 july 2021</p>
-            <p>11 : 30</p>
-          </div>
-        </div>
-      </div>
-      <div class="done-task">
-        <p>Выполнено</p>
-        <div class="container-task">
-          <div class="text-task">
-            <i class="fas fa-check"></i>
-            <p>Вынести мусор</p>
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
-        </div>
-          <div class="time">
-            <p>11 july 2021</p>
-            <p>11 : 30</p>
-          </div>
-        </div><div class="container-task">
-          <div class="text-task">
-            <i class="fas fa-check"></i>
-            <p>Вынести мусор</p>
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
-        </div>
-          <div class="time">
-            <p>11 july 2021</p>
-            <p>11 : 30</p>
-          </div>
-        </div><div class="container-task">
-          <div class="text-task">
-            <i class="fas fa-check"></i>
-            <p>Вынести мусор</p>
-            <i class="fas fa-edit"></i>
-            <i class="fas fa-trash-alt"></i>
-        </div>
-          <div class="time">
-            <p>11 july 2021</p>
-            <p>11 : 30</p>
-          </div>
-        </div>
 
+      </div>
+      <div class="done-task" id="done-task">
+        <p>Выполнено</p>
+        
       </div> 
     </div>
-    <div class="add-task-container">
+    <div class="add-task-container" id="add-task-container">
       <div class="add-task">
-        <input type="text" class="write-task" id="write-task" placeholder="Введите задачу здесь..." />
+        <input type="text" class="write-task" id="add-task" placeholder="Введите задачу здесь..." />
         <button class="btn-add-task"><p>Добавить</p></button>
         <div class="add"></div>
       </div>
     </div>
   </main>
+
+  <div class="registr">
+    <div class="loga-name-reg">
+      <p>ToDo Paper</p>
+    </div>
+    <div class="window-reg">
+      <p class="name-page-registr">Регистрация</p>
+      <div class="form-container">
+        <form action="" class="form-registr" id="form-registr">
+        <input type="text" name="name-user" id="name-user" required placeholder="Введите имя">
+        <input type="password" name="pass" id="password" required placeholder="Введите пароль">
+        <input type="password" required id="password-repit" placeholder="Повторите пароль">
+        <button class="btn-registr" type="submit"><p>Зарегистрироваться</p> </button>
+        </form>
+      </div>
+      <div class="link-page">
+        <a href="#">Войти</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="login">
+    <div class="loga-name-log">
+      <p>ToDo Paper</p>
+    </div>
+    <div class="window-log">
+      <p class="name-page-login">Вход</p>
+      <div class="form-container">
+        <form action="" class="form-login" id="form-login">
+        <input type="text" name="name-user" id="name-user-log" required placeholder="Введите имя">
+        <input type="password" name="pass" id="password-log" required placeholder="Введите пароль">
+        <button class="btn-login" type="submit"><p>Войти</p> </button>
+        </form>
+      </div>
+      <div class="link-page">
+        <a href="#">Зарегистрироваться</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="error">
+    <div class="loga-name-error">
+      <p>ToDo Paper</p>
+    </div>
+    <div class="window-err">
+      <p class="name-page-error">Упс, возникла ошибка</p>
+      <div class="error-container">
+        <p>Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки</p>
+      </div>
+      <div class="main-page" id="main-page">
+        <button class="btn-main-page" type="submit"><p>На главную</p> </button>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
       <ul class="list-footer"> 
           <li>Вероника Королёва</li> 
           <li>-</li> 
           <li>nika-11@mail.ru</li>
       </ul>
-  </footer>
+  </footer>   
+  <script src="scriptView.js"></script> 
+  <script src="script.js"></script>
 </body>
 </html>

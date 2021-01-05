@@ -4,6 +4,8 @@
   --main-color-fon: #FCF7FD;
 }
 
+
+
 html {
   font-size: 14px;
 }
@@ -15,6 +17,15 @@ html {
   height: 100%;
 
   background-color: var(--main-color-fon);
+}
+
+input, button{
+  outline: 0;
+  border: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 .header {
@@ -37,6 +48,10 @@ html {
 
   color: #737072;
   opacity: 100%;
+}
+
+.active-user{
+  display: flex;
 }
 
 .hello-user{
@@ -68,12 +83,40 @@ html {
   color: var(--main-pink);
 }
 
+.login-registr{
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: none;
+  flex: 2;
+  align-items: center;
+}
+
 .main{
   position: relative;
   top: 5rem;
   height: calc(100% - 7.5rem);
   padding: 0 2rem;
   display: block;
+}
+
+.info{
+  color: var(--main-green);
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.welcom{
+  font-weight: bolder;
+  font-size: 2rem;
+  color: var(--main-green);
+  display: block;
+}
+
+.welcom ~ p{
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .task{
@@ -88,6 +131,7 @@ html {
 }
 
 .new-task >p, .done-task > p{
+  font-weight: bolder;
   font-size: 1.2rem;
   color: #700961;
 }
@@ -188,7 +232,10 @@ html {
   height: max-content;
   bottom: 2rem;
   padding-left: 30%;
-  width: 40%;
+  width: 80%;
+  min-width: 12rem;
+  max-width: 30rem;
+  display: flex;
 }
 
 .fa-check{
@@ -233,15 +280,6 @@ html {
   cursor: pointer;
 }
 
-.btn-add-task > p {
-  font-family: Open Sans;
-  margin: 0;
-  align-items: center;
-  text-align: center;
-
-  cursor: pointer;
-  color: #FAE9FD;
-}
 
 .footer{
   position: fixed;
@@ -264,3 +302,228 @@ html {
   width: auto;
   padding-left: 1rem;
 }
+
+/* registation and login*/
+.registr{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color-fon);
+  z-index: 100000;
+}
+
+.login{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color-fon);
+  z-index: 100000;
+}
+.loga-name-reg{
+  font-family: Open Sans;
+  font-weight: bold;
+  margin: 0 1rem;
+  height: 3rem;
+  font-size: 2rem;
+  align-items: center;
+  text-align: center;
+  flex: 5;
+
+  color: #737072;
+}
+
+.loga-name-log{
+  font-family: Open Sans;
+  font-weight: bold;
+  margin: 0 1rem;
+  height: 3rem;
+  font-size: 2rem;
+  align-items: center;
+  text-align: center;
+  flex: 5;
+
+  color: #737072;
+}
+
+.window-reg, .window-log, .window-err{
+  width: 28rem;
+  height: 32rem;
+  background: #FFFFFF;
+  box-shadow: 0px 14px 42px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+}
+
+.name-page-registr, .name-page-login, .name-page-error{
+  margin-top: 3rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #700961;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+}
+
+.form-registr {
+  display: inline-grid;
+  row-gap: 1rem;
+}
+
+.form-login{
+  display: inline-grid;
+  row-gap: 1rem;
+}
+
+.form-registr > input{
+  width: 18rem;
+  height: 3rem;
+  padding: 0 1rem;
+
+  border: none;
+  background: rgba(112, 9, 97, 0.05);
+  border-radius: 1rem;
+}
+
+.form-login > input{
+  width: 18rem;
+  height: 3rem;
+  padding: 0 1rem;
+
+  border: none;
+  background: rgba(112, 9, 97, 0.05);
+  border-radius: 1rem;
+}
+
+.btn-registr{
+  width: 12rem;
+  height: 3rem;
+  justify-self: center;
+
+  background: #700961;
+  border-radius: 1rem;
+  border: none;
+}
+
+.btn-login{
+  width: 12rem;
+  height: 3rem;
+  justify-self: center;
+
+  background: #700961;
+  border-radius: 1rem;
+  border: none;
+}
+
+.btn-add-task, .btn-registr, .btn-login, .btn-main-page > p {
+  font-family: Open Sans;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+
+  cursor: pointer;
+  color: #FAE9FD;
+}
+
+.link-page{
+  margin-top: 0.5rem;
+    display: grid;
+    justify-items: center;
+}
+
+/*Error page*/
+.error{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color-fon);
+    z-index: 100000;
+}
+
+.loga-name-error{
+    font-family: Open Sans;
+    font-weight: bold;
+    margin: 0 1rem;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    color: #737072;
+}
+
+.error-container{
+  margin: 2rem 2rem 1rem;
+  width: 85%;
+  height: fit-content;
+  text-align: center;
+}
+
+.error-container >p{
+  color: var(--main-green);
+    font-size: 1.2rem;
+}
+
+.main-page{
+  text-align: center;
+}
+
+.btn-main-page{
+
+  width: 8rem;
+  height: 3rem;
+  justify-self: center;
+
+  background: #700961;
+  border-radius: 1rem;
+  border: none;
+}
+
+@media screen and (max-width: 870px){
+
+  .logo-name{
+    font-size: 1.5rem;
+    max-width: 7rem;
+  }
+  .task{
+    display: block;
+    height: calc(100% - 5rem);
+    OVERFLOW: auto;
+  }
+
+  .add-task-container{
+    padding-left: 0;
+    min-width: 12rem;
+  }
+
+  .container-task{
+    display: block;
+  }
+
+  .time{
+    display: flex;
+    height: 1rem;
+  }
+
+  .time > p{
+    margin: 1rem 0.5rem;
+  }
+
+  .welcom ~ p{
+    width: 20rem;
+  }
+  .info{
+    width: 20rem;
+  }
+} 
