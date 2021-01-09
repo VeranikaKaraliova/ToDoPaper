@@ -28,30 +28,54 @@ class HeaderView {
   }
 
   display(user) {
-    if (!user) {
+    if (user === '' || user === undefined) {
       const loginRegistr = document.getElementById('login-registr');
       loginRegistr.style.display = 'flex';
+
       const addTaskContainer = document.getElementById('add-task-container');
       addTaskContainer.style.display = 'none';
+
       const activeUser = document.getElementById('active-user');
       activeUser.style.display = 'none';
-      const filter = document.querySelector('.filter');
-      filter.innerHTML = '<div class="filter"><p class="welcom">Добро пожаловать!&#128588;</p><p class="welcom">С помощью этого приложения ты сможешь правитьно организовать свой день, а может даже и жизнь;) Для того, чтобы начать необходимо войти или зарегистрироваться</p></div>';
+
+      const filter = document.getElementById('filter');
+      const info = document.createElement('div');
+      info.innerHTML = '<div class="filter"><p class="welcom">Добро пожаловать!&#128588;</p><span class="welcom-info">С помощью этого приложения ты сможешь правитьно организовать свой день, а может даже и жизнь;) Для того, чтобы начать необходимо войти или зарегистрироваться</span></div>';
+      filter.appendChild(info);
+
+      const search = document.getElementById('search');
+      search.style.display = 'none';
+
+      const filterDate = document.getElementById('filter-date');
+      filterDate.style.display = 'none';
+
+      const welcom = document.querySelector('.welcom');
+      welcom.style.display = 'block';
     } else {
-      console.log('25');
       const loginRegistr = document.getElementById('login-registr');
       loginRegistr.style.display = 'none';
+
       const activeUser = document.getElementById('active-user');
       activeUser.style.display = 'flex';
+
       const helloUser = document.getElementById('hello-user');
       helloUser.innerHTML = `Привет, ${user}`;
+
       const addTaskContainer = document.getElementById('add-task-container');
       addTaskContainer.style.display = 'flex';
+
+      const search = document.getElementById('search');
+      search.style.display = 'flex';
+
       const filter = document.querySelector('.filter');
-      filter.innerHTML = `<div class="search">
-      <input type="text" class="write-task" id="write-task" placeholder="Найти..." />
-      <button class="btn-add-task"><p>Найти</p></button>
-    </div>`;
+      filter.innerHTML = `<div class="search" id="search">
+      <input type="text" class="search-task" id="search-task" placeholder="Найти..." />
+      <button class="btn-search-task" id="btn-search-task">Найти</button>
+      </div>
+      <div class="filter-date" id="filter-date">
+        <p>Фильтр</p>
+        <input type="date" id="calendar"  class="calendar">
+      </div>`;
     }
   }
 }

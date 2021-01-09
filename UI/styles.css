@@ -4,10 +4,9 @@
   --main-color-fon: #FCF7FD;
 }
 
-
-
 html {
   font-size: 14px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .body {
@@ -39,30 +38,26 @@ a{
 }
 
 .logo-name{
-  font-family: Open Sans;
-  font-weight: bold;
   margin: 0 1rem;
-  height: 3rem;
+  padding: 0.5rem 0 0;
   font-size: 2rem;
   flex: 5;
 
   color: #737072;
-  opacity: 100%;
 }
 
 .active-user{
   display: flex;
+  font-size: 1.2rem;
 }
 
 .hello-user{
   margin: 0 1rem;
-  font-family: Open Sans;
   display: flex;
   
-  font-size: 1.2rem;
   align-items: center;
   text-align: center;
-  color: #0C7B93;
+  color: var(--main-green);
 }
 
 .btn-exit{
@@ -75,7 +70,6 @@ a{
 .btn-exit > p {
   margin: 0;
 
-  font-family: Open Sans;
   font-weight: bold;
   font-size: 1.2rem;
   align-items: center;
@@ -106,17 +100,24 @@ a{
     font-style: italic;
 }
 
-.welcom{
-  font-weight: bolder;
-  font-size: 2rem;
-  color: var(--main-green);
+.welcom-container{
   display: block;
 }
 
-.welcom ~ p{
+.welcom{
+  margin: 0.6rem;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: var(--main-green);
+  display: none;
+  color: var(--main-pink);
+}
+
+.welcom-info{
   font-size: 1.2rem;
   font-style: italic;
   font-weight: normal;
+  color: var(--main-green);
 }
 
 .task{
@@ -126,26 +127,57 @@ a{
 
 .filter, .new-task, .done-task{
   flex: 1.5;
+  width: 20rem;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.new-task::-webkit-scrollbar { 
+  width: 0;
+  height: 0;
+}
+
+.done-task::-webkit-scrollbar { 
+  width: 0;
+  height: 0;
 }
 
 .new-task >p, .done-task > p{
   font-weight: bolder;
   font-size: 1.2rem;
-  color: #700961;
+  color: var(--main-pink);
 }
 
 .search{
   max-width: 21rem;
   min-width: 12rem;
   height: 3rem;
-  margin: 4rem 0;
+  margin: 4rem 0 1.5rem;
   display: flex;
 
   background: #FFFFFF;
   border: 1px solid var(--main-pink);
   box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.filter-date{
+  display: flex;
+}
+
+.filter-date > p{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: var(--main-pink);
+}
+
+.calendar{
+  padding: 0 1rem;
+  margin: 0 2rem;
+  height: 3rem;
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
 }
 
@@ -157,19 +189,21 @@ a{
 .text-task{
   max-width: 21rem;
   min-width: 15rem;
-  height: 3rem;
+  height: fit-content;
   flex: 3;
+  word-break: break-word;
   display: flex;
   align-items: center;
 
   background: #FFFFFF;
-  border: 1px solid #700961;
+  border: 1px solid var(--main-pink);
   box-sizing: border-box;
   border-radius: 1rem;
 }
 
 .text-task > p {
   flex: 5;
+  padding-right: 0.5rem;
 }
 
 .fa-edit, .fa-trash-alt{
@@ -250,7 +284,7 @@ a{
   display: flex;
 
   background: #FFFFFF;
-  border: 1px solid #700961;
+  border: 1px solid var(--main-pink);
   box-sizing: border-box;
   border-radius: 1rem;
 }
@@ -264,7 +298,7 @@ a{
   padding-left: 1rem;
 }
 
-.write-task{
+.write-task, .search-task{
   height: 90%;
   margin: 0 1rem;
   width: 90%;
@@ -272,8 +306,8 @@ a{
   flex: 1;
 }
 
-.btn-add-task{
-  width: 5rem;
+.btn-add-task, .btn-search-task{
+  width: 6rem;
   border: none;
   background: var(--main-pink);
   border-radius: 0 1rem 1rem 0;
@@ -328,7 +362,6 @@ a{
   z-index: 100000;
 }
 .loga-name-reg{
-  font-family: Open Sans;
   font-weight: bold;
   margin: 0 1rem;
   height: 3rem;
@@ -341,7 +374,6 @@ a{
 }
 
 .loga-name-log{
-  font-family: Open Sans;
   font-weight: bold;
   margin: 0 1rem;
   height: 3rem;
@@ -366,7 +398,7 @@ a{
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #700961;
+  color: var(--main-pink);
 }
 
 .form-container{
@@ -409,7 +441,7 @@ a{
   height: 3rem;
   justify-self: center;
 
-  background: #700961;
+  background: var(--main-pink);
   border-radius: 1rem;
   border: none;
 }
@@ -419,13 +451,12 @@ a{
   height: 3rem;
   justify-self: center;
 
-  background: #700961;
+  background: var(--main-pink);
   border-radius: 1rem;
   border: none;
 }
 
-.btn-add-task, .btn-registr, .btn-login, .btn-main-page > p {
-  font-family: Open Sans;
+.btn-add-task, .btn-search-task, .btn-registr, .btn-login, .btn-main-page > p {
   margin: 0;
   align-items: center;
   text-align: center;
@@ -436,31 +467,31 @@ a{
 
 .link-page{
   margin-top: 0.5rem;
-    display: grid;
-    justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 /*Error page*/
 .error{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: var(--main-color-fon);
-    z-index: 100000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color-fon);
+  z-index: 100000;
 }
 
 .loga-name-error{
-    font-family: Open Sans;
-    font-weight: bold;
-    margin: 0 1rem;
-    font-size: 2rem;
-    align-items: center;
-    text-align: center;
-    color: #737072;
+  font-weight: bold;
+  margin: 0 1rem;
+  font-size: 2rem;
+  align-items: center;
+  text-align: center;
+  color: #737072;
 }
 
 .error-container{
@@ -472,7 +503,7 @@ a{
 
 .error-container >p{
   color: var(--main-green);
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .main-page{
@@ -485,12 +516,37 @@ a{
   height: 3rem;
   justify-self: center;
 
-  background: #700961;
+  background: var(--main-pink);
   border-radius: 1rem;
   border: none;
 }
 
+
+
 @media screen and (max-width: 870px){
+
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 760px){
+
+  html {
+    font-size: 12px;
+  }
+
+  .window-reg, .window-log, .window-err {
+    width: 25rem;
+  }
+
+  .filter{
+    margin-top: 1rem;
+  }
+
+  .filter-date{
+    display: none;
+  }
 
   .logo-name{
     font-size: 1.5rem;
@@ -499,12 +555,22 @@ a{
   .task{
     display: block;
     height: calc(100% - 5rem);
-    OVERFLOW: auto;
+    overflow: auto;
+  }
+
+  .task::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
   }
 
   .add-task-container{
     padding-left: 0;
+    width: 100%;
     min-width: 12rem;
+  }
+
+  .add-task{
+    width: 20rem;
   }
 
   .container-task{

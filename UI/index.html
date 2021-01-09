@@ -24,11 +24,19 @@
   </header>
   <main class="main">
     <div class="task">
-      <div class="filter">  
-        <div class="search">
-          <input type="text" class="write-task" id="search-task" placeholder="Найти..." />
-          <button class="btn-add-task"><p>Найти</p></button>
+      <div class="filter" id="filter">  
+        <div class="search" id="search">
+          <input type="text" class="search-task" id="search-task" placeholder="Найти..." />
+          <button class="btn-search-task" id="btn-search-task">Найти</button>
         </div>
+        <div class="filter-date" id="filter-date">
+          <p>Фильтр</p>
+          <input type="date" id="calendar"  class="calendar">
+        </div>
+        <!-- <div>
+          <p>Фильтр</p>
+          <input type="date"  id="calendar" class="calendar">
+        </div> -->
       </div>
       <div class="new-task" id="new-task">
         <p>Мои задачи</p>
@@ -42,7 +50,7 @@
     <div class="add-task-container" id="add-task-container">
       <div class="add-task">
         <input type="text" class="write-task" id="add-task" placeholder="Введите задачу здесь..." />
-        <button class="btn-add-task"><p>Добавить</p></button>
+        <button class="btn-add-task" id="btn-add-task">Добавить</button>
         <div class="add"></div>
       </div>
     </div>
@@ -59,11 +67,11 @@
         <input type="text" name="name-user" id="name-user" required placeholder="Введите имя">
         <input type="password" name="pass" id="password" required placeholder="Введите пароль">
         <input type="password" required id="password-repit" placeholder="Повторите пароль">
-        <button class="btn-registr" type="submit"><p>Зарегистрироваться</p> </button>
+        <button class="btn-registr" type="submit">Зарегистрироваться</button>
         </form>
       </div>
       <div class="link-page">
-        <a href="#">Войти</a>
+        <a href="#" id="login-in">Войти</a>
       </div>
     </div>
   </div>
@@ -78,11 +86,11 @@
         <form action="" class="form-login" id="form-login">
         <input type="text" name="name-user" id="name-user-log" required placeholder="Введите имя">
         <input type="password" name="pass" id="password-log" required placeholder="Введите пароль">
-        <button class="btn-login" type="submit"><p>Войти</p> </button>
+        <button class="btn-login" type="submit">Войти</button>
         </form>
       </div>
       <div class="link-page">
-        <a href="#">Зарегистрироваться</a>
+        <a href="#" id="sign-up">Зарегистрироваться</a>
       </div>
     </div>
   </div>
