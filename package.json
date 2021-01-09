@@ -1,0 +1,32 @@
+{
+  "name": "ToDoPaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./UI",
+    "lint:fix": "eslint ./UI --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeranikaKaraliova/ToDoPaper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeranikaKaraliova/ToDoPaper/issues"
+  },
+  "homepage": "https://github.com/VeranikaKaraliova/ToDoPaper#readme",
+  "devDependencies": {
+    "eslint": "^7.16.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo Paper</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <link rel="stylesheet" href="https://use.typekit.net/aoy3hrr.css">
+  <script src="https://kit.fontawesome.com/bbf6e62271.js" crossorigin="anonymous"></script> 
+  <title>Document</title>
+</head>
+<body class="body">
+  <header class="header" id="header">
+      <p class="logo-name">ToDo Paper</p>
+      <div class="active-user" id="active-user">
+        <p class="hello-user" id="hello-user">Привет, Nika</p>
+        <p>|</p>
+        <button class="btn-exit"><p>Выход</p></button>
+      </div>
+      <div id="login-registr" class="login-registr">
+        <a href='#' class="login-button">Войти|</a>
+        <a href='#' class="regisrt-button">Зарегистрироваться</a>
+    </div>
+  </header>
+  <main class="main">
+    <div class="task">
+      <div class="filter" id="filter">  
+        <div class="search" id="search">
+          <input type="text" class="search-task" id="search-task" placeholder="Найти..." />
+          <button class="btn-search-task" id="btn-search-task">Найти</button>
+        </div>
+        <div class="filter-date" id="filter-date">
+          <p>Фильтр</p>
+          <input type="date" id="calendar"  class="calendar">
+        </div>
+        <!-- <div>
+          <p>Фильтр</p>
+          <input type="date"  id="calendar" class="calendar">
+        </div> -->
+      </div>
+      <div class="new-task" id="new-task">
+        <p>Мои задачи</p>
+
+      </div>
+      <div class="done-task" id="done-task">
+        <p>Выполнено</p>
+        
+      </div> 
+    </div>
+    <div class="add-task-container" id="add-task-container">
+      <div class="add-task">
+        <input type="text" class="write-task" id="add-task" placeholder="Введите задачу здесь..." />
+        <button class="btn-add-task" id="btn-add-task">Добавить</button>
+        <div class="add"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="registr">
+    <div class="loga-name-reg">
+      <p>ToDo Paper</p>
+    </div>
+    <div class="window-reg">
+      <p class="name-page-registr">Регистрация</p>
+      <div class="form-container">
+        <form action="" class="form-registr" id="form-registr">
+        <input type="text" name="name-user" id="name-user" required placeholder="Введите имя">
+        <input type="password" name="pass" id="password" required placeholder="Введите пароль">
+        <input type="password" required id="password-repit" placeholder="Повторите пароль">
+        <button class="btn-registr" type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+      <div class="link-page">
+        <a href="#" id="login-in">Войти</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="login">
+    <div class="loga-name-log">
+      <p>ToDo Paper</p>
+    </div>
+    <div class="window-log">
+      <p class="name-page-login">Вход</p>
+      <div class="form-container">
+        <form action="" class="form-login" id="form-login">
+        <input type="text" name="name-user" id="name-user-log" required placeholder="Введите имя">
+        <input type="password" name="pass" id="password-log" required placeholder="Введите пароль">
+        <button class="btn-login" type="submit">Войти</button>
+        </form>
+      </div>
+      <div class="link-page">
+        <a href="#" id="sign-up">Зарегистрироваться</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="error">
+    <div class="loga-name-error">
+      <p>ToDo Paper</p>
+    </div>
+    <div class="window-err">
+      <p class="name-page-error">Упс, возникла ошибка</p>
+      <div class="error-container">
+        <p>Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки Текст ошибки</p>
+      </div>
+      <div class="main-page" id="main-page">
+        <button class="btn-main-page" type="submit"><p>На главную</p> </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+      <ul class="list-footer"> 
+          <li>Вероника Королёва</li> 
+          <li>-</li> 
+          <li>nika-11@mail.ru</li>
+      </ul>
+  </footer>   
+  <script src="scriptView.js"></script> 
+  <script src="script.js"></script>
+</body>
+</html>
